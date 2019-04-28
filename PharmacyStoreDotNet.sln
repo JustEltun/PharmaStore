@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PharmacyStoreDotNet", "PharmacyStoreDotNet\PharmacyStoreDotNet.csproj", "{21DE8C8F-6FDA-41D5-B4BD-30E090F62EE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PharmaStoreData", "PharmaStoreData\PharmaStoreData.csproj", "{58691F2F-4015-46D7-94EC-665E05E60448}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21DE8C8F-6FDA-41D5-B4BD-30E090F62EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21DE8C8F-6FDA-41D5-B4BD-30E090F62EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21DE8C8F-6FDA-41D5-B4BD-30E090F62EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21DE8C8F-6FDA-41D5-B4BD-30E090F62EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58691F2F-4015-46D7-94EC-665E05E60448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58691F2F-4015-46D7-94EC-665E05E60448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58691F2F-4015-46D7-94EC-665E05E60448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58691F2F-4015-46D7-94EC-665E05E60448}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAA163B1-8A2A-498F-A331-BD8231F1C9C6}
+	EndGlobalSection
+EndGlobal

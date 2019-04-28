@@ -1,0 +1,57 @@
+﻿@model PharmaStoreData.Drug
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <form id="formEdit" method="post" action="/manage/edit">
+            @Html.ValidationSummary(true)
+            <input hidden type="text" name="Id" value="@Model.Id" />
+            <div class="form-group">
+                <label>Name:</label>
+                <input class="form-control" name="Name" type="text" placeholder="enter name" value="@Model.Name" />
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+            <div class="form-group">
+                <label>Description:</label>
+                <input class="form-control" name="Description" type="text" placeholder="enter description" value="@Model.Description" />
+                @Html.ValidationMessageFor(model => model.Description)
+            </div>
+            <div class="form-group">
+                <label>Manufacturer:</label>
+                <input class="form-control" name="Manufacturer" type="text" placeholder="enter manufacturer" value="@Model.Manufacturer" />
+                @Html.ValidationMessageFor(model => model.Manufacturer)
+            </div>
+            <div class="form-group">
+                <label>Country:</label>
+                <input class="form-control" name="Country" type="text" placeholder="enter country" value="@Model.Country" />
+                @Html.ValidationMessageFor(model => model.Country)
+            </div>
+            <div class="form-group">
+                <label>Price:</label>
+                <input class="form-control" name="Price" type="text" placeholder="enter price" value="@Model.Price" />
+                @Html.ValidationMessageFor(model => model.Price)
+            </div>
+            <div class="form-group">
+                <label>Amount:</label>
+                <input class="form-control" name="Amount" type="text" placeholder="enter amount" value="@Model.Amount" />
+                @Html.ValidationMessageFor(model => model.Amount)
+            </div>
+            <div class="form-group">
+                <label>Manufactured Date:</label>
+                <input class="form-control" name="ManufacturedDate" type="text" placeholder="enter manufactured date" value="@Model.ManufacturedDate.ToShortDateString()" />
+                @Html.ValidationMessageFor(model => model.ManufacturedDate)
+            </div>
+            <div class="form-group">
+                <label>Expiration:</label>
+                <input class="form-control" name="Expiration" type="text" placeholder="enter expiration" value="@Model.Expiration" />
+                @Html.ValidationMessageFor(model => model.Expiration)
+            </div>
+            <button type="submit"  class="btn btn-default">Change</button>
+        </form>
+    </div>
+</div>
+

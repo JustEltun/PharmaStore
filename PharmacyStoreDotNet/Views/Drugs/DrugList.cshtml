@@ -1,0 +1,16 @@
+﻿@model List<PharmaStoreData.Drug>
+
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    @foreach (var drug in Model)
+    {
+        <tr>
+            <td>@drug.Name</td>
+            <td>@drug.Description</td>
+        </tr>
+    }
+</table>

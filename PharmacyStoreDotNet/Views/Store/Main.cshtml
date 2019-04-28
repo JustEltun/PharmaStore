@@ -1,0 +1,60 @@
+﻿@model List<PharmaStoreData.Drug>
+@{
+    ViewBag.Title = "Main";
+}
+
+
+<div class="row">
+    <div class="search-drugs">
+        <span><i class="glyphicon glyphicon-search"></i></span>
+        <input class="form-control" oninput="KeyboardReceiver(event)" type="text" id="search" placeholder="Search everything" value="" />
+    </div>
+    <div class="search-result"></div>
+    <div class="drugs-list">
+        @{Html.RenderAction("druglist", "drugs");}
+    </div>
+</div>
+
+
+
+@section Scripts{
+    <script>
+        async function Find() {
+            var search = $('#search').val();
+            var data = {
+                target: search
+            }
+            $.ajax({
+                type: 'POST',
+                url: '/drugs/find',
+                data: data,
+                success: function (res) {
+                    if (res !== null)
+                        WriteResult(res);
+                },
+                error: function (xhr) {
+                    alert(xhr.responseText);
+                }
+            });
+        }
+        async function WriteResult(data) {
+            $('.drugs-list').hide();
+            $('.search-result').css('display', 'block').html("").append('<h5>Result:</h5>');
+            if (data.length !== 0) {
+                $.each(data, function (i, v) {
+                    $('.search-result').append('<a href=' + "/drugs/about/" + v.Id + '>Preparate name: <b>' + v.Name + '</b> Description: <b>' + v.Description + '</b></a ><br/>');
+                });
+            }
+            else
+                $('.search-result').append('<h5 class="text-center"><b>Not found</b></h5>');
+        }
+        function KeyboardReceiver(e) {
+            if ($('#search').val() !== '')
+                Find();
+            else {
+                $('.search-result').html("").css('display', 'none');
+                $('.drugs-list').show();
+            }
+        }
+    </script>
+}

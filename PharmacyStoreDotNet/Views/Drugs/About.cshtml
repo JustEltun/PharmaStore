@@ -1,0 +1,19 @@
+﻿@model PharmaStoreData.Drug
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>About</h2>
+<div class="row">
+    <div class="drug-about">
+        <span><b>Name:</b> @Model.Name</span>
+        <span><b>Description:</b> @Model.Description</span>
+        <span><b>Manufacturer:</b> @Model.Manufacturer</span>
+        <span><b>Country:</b> @Model.Country</span>
+        <span><b>Price:</b> @Model.Price $</span>
+        <span><b>Amount:</b> @Model.Amount</span>
+        <span><b>Manufactured Date:</b> @Model.ManufacturedDate.ToShortDateString()</span>
+        <span><b>Expiration:</b> @Model.Expiration mounth</span>
+    </div>
+</div>
+
